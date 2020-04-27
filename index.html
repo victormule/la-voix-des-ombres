@@ -17,6 +17,26 @@
 
 
 /* Float four columns side by side */
+  .jonny {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
 .column {
   float:left;
   width: 20%;
@@ -154,7 +174,7 @@ embed {
 </style>
 </head>
 <body>
-
+<div class="jonny"></div>
 <br>
   <div class="column">
 <center><iframe  width="100%" scrolling="no" frameborder="no" allow="autoplay" style="display:block" id="iframeAudio" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/532982658&auto_play=true"></iframe></center>
@@ -166,7 +186,7 @@ embed {
     <p>contes et legendes de notre temps  </p>
       <br>
     </div>
-  
+  <div class="jonny"></div>
    <embed src="samar.pdf"  width=100% height=500 type='application/pdf'></embed>
   </div>
  </div>
