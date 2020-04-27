@@ -28,8 +28,21 @@
 .column:hover {
   width: 25%;
 }
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
 /* Responsive columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 .column {
     width: 100%;
     display: table;
