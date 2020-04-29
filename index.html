@@ -15,6 +15,90 @@
   box-sizing: border-box;
 }
 
+#parent {
+   position: absolute;
+   width: 30%
+}
+img.superpose {
+position: relative;
+top: 20px;
+
+}
+#img_1 {
+  border-radius: 100%;
+  width: 20%;
+  position: absolute;
+   z-index: 11;
+   margin-top: 3%;
+   margin-left: 3%;
+   opacity: 0.6;
+   transition: .4s;
+   display:
+}
+
+#img_1:hover {
+  border-radius: 100%;
+    opacity:0.93;
+    width: 22%;
+  margin-top: 2%;
+   margin-left: 2%;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+    } 
+#img_1:hover + #img_2{
+     animation-duration: 3s;
+    opacity:0.9;
+    width: 22%;
+  margin-top: 2%;
+   margin-left: 2%;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+
+    }  
+ 
+
+#img_2 {
+  opacity: 0.8;
+  border-radius: 100%;
+  position: absolute;
+  width: 26%;
+   transition: .4s;
+   z-index: 2;
+   animation-name: logo;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: linear;
+  }
+
+
+@keyframes logo {
+  100% {transform: rotate(360deg)}
+
+}
+
+#img_2:hover{
+
+    opacity:0.9;
+    animation-duration: 10s;
+    width: 28%; 
+     margin-top: -1%;
+       margin-left: -1%;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    }  
+
+#img_3 {
+    border-radius: 100%;
+  width: 20%;
+   z-index: -10;
+   margin-top: 3%;
+   margin-left: 3%;
+   opacity: 0.0;
+   transition: width 5s;
+}
 
 /* Float four columns side by side */
 .column {
@@ -264,7 +348,12 @@
 </style>
 </head>
 <body>
-<div class="jonny"></div>
+<center>
+
+   <img id="img_1" class="superpose" src="logo.svg" alt="La voix des Ombres" />
+   <img id="img_2" class="superpose" src="logo2.svg" alt="La voix des Ombres" />
+   <img id="img_3" class="superpose" src="logo2.svg" alt="La voix des Ombres" />
+</center>
 <br>
   <div class="column">
 <center><iframe  width="100%" scrolling="no" frameborder="no" allow="autoplay" style="display:block" id="iframeAudio" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/532982658&auto_play=true"></iframe></center>
