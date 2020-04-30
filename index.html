@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <style>
@@ -56,7 +56,7 @@ top: 20px;
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 
     }  
- 
+
 
 #img_2 {
   opacity: 0.8;
@@ -92,6 +92,7 @@ top: 20px;
 
 #img_3 {
     border-radius: 100%;
+  padding-bottom: 35px;
   width: 20%;
    z-index: -10;
    margin-top: 3%;
@@ -99,12 +100,31 @@ top: 20px;
    opacity: 0.0;
    transition: width 5s;
 }
+#img_4 {
+  width: 100%;
+  opacity: 1.0;
+  position: absolute;
+  z-index: 40;
+  margin-left: -50%;
+  margin-top: -40%; 
+  transition: 7s;
+    }
+#img_4:hover {
+  width: 120%;
+  margin-left: -60%;
+  margin-top: -47%;
+  transform: rotate(720deg);
+  opacity:0.0;
+  z-index:-2;
 
+ 
+  }
 /* Float four columns side by side */
 .column {
   float:left;
   width: 20%;
   padding: 0 10px;
+  margin-left: 10%;
   margin-bottom: 10px;
   transition: width 3s;
 }
@@ -112,10 +132,22 @@ top: 20px;
 .column:hover {
   width: 25%;
 }
-/* On screens that are 992px wide or less, go from four columns to two columns*/
+.column2 {
+  float:left;
+  width: 20%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  transition: width 3s;
+}
+
+.column2:hover {
+  width: 25%;
+}
+/* On screens that are 1200px wide or less, go from four columns to two columns*/
 @media screen and (max-width: 1200px) {
   .column {
     width: 33%;
+    margin-left: 0%
   }
   .column:hover {
     width: 33%;  
@@ -125,6 +157,7 @@ top: 20px;
 @media screen and (max-width: 992px) {
   .column {
     width: 50%;
+    margin-left:0%;
   }
   .column:hover {
     width: 50%;  
@@ -134,26 +167,61 @@ top: 20px;
 @media screen and (max-width: 600px) {
 .column {
     width: 100%;
-   
+   margin-left:0%;
   }
  .column:hover {
+    width: 100%;   
+}  
+}
+/* On screens that are 1200px wide or less, go from four columns to two columns*/
+@media screen and (max-width: 1200px) {
+  .column2 {
+    width: 33%;
+    margin-left: 0%
+  }
+  .column2:hover {
+    width: 33%;  
+}
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns*/
+@media screen and (max-width: 992px) {
+  .column2 {
+    width: 50%;
+    height: 100%;
+  }
+  .column2:hover {
+    width: 50%;  
+}
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.column2 {
+    width: 100%;
+  }
+ .column2:hover {
     width: 100%;
    
 }
   
 }
-  
 
 /* Style the counter block */
 .text-block0 {
-  height: 130px;
+  height: 140px;
   background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  padding:0 10px;
+  padding:0 15px;
   text-align: justify; 
   color: rgba(255, 255, 255, 0.0);
-  opacity: 0.35;
+  opacity: 0.4;
   transition: height 10s, color 12s;
+  word-break: break-word;
+  -webkit-hyphens:auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   position: relative;
   z-index: 1;
   animation-name: example;
@@ -163,10 +231,12 @@ top: 20px;
   animation-iteration-count: 1;
   animation-direction: alternate;
   }
-  .text-block0:hover {
+  .text-block0:hover{
     color: rgba(255, 255, 255, 1.0);
-    opacity: 0.90;
-    height:299px;
+    opacity: 0.95;
+    height:400px;
+    z-index: 0;
+
   }
 
 @keyframes example {
@@ -177,16 +247,40 @@ top: 20px;
   50% {opacity: 1.0; left:0px; top:0px;}
   100% {opacity: 0.35; left:0px; top:0px;}
 }
-
+/* On screens that are 1200px wide or less, go from four columns to two columns*/
+@media screen and (max-width: 1200px) {
+  .text-block0 {
+height: 200px;
+  }
+}
+/* On screens that are 992px wide or less, go from four columns to two columns*/
+@media screen and (max-width: 992px) {
+  .text-block0 {
+height: 200px;
+}
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.text-block0 {
+height: 200px;
+  } 
+}
     /* Style the counter block */
 .text-block1 {
   height: 130px;
   background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: white;
-  opacity: 0.35;
-  transition: height 10s;
+  padding:0 10px;
+  text-align: justify; 
+  color: rgba(255, 255, 255, 0.0);
+  opacity: 0.4;
+  transition: height 10s, color 12s;
+  word-break: break-word;
+  -webkit-hyphens:auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   position: relative;
   z-index: 1;
   animation-name: example1;
@@ -197,8 +291,10 @@ top: 20px;
   animation-direction: alternate;
   }
   .text-block1:hover {
+  color: rgba(255, 255, 255, 1.0);
    opacity: 0.90;
    height:299px;
+   
 }
 
 @keyframes example1 {
@@ -216,10 +312,17 @@ top: 20px;
   height: 200px;
   background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: white;
-  opacity: 0.35;
-  transition: height 10s;
+  padding: 0 15px;
+  text-align: justify; 
+  color: rgba(255, 255, 255, 0.0);
+  opacity: 0.4;
+  transition: height 10s, color 12s;
+  word-break: break-word;
+  -webkit-hyphens:auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   position: relative;
   z-index: 1;
   animation-name: example2;
@@ -230,8 +333,9 @@ top: 20px;
   animation-direction: alternate-reverse;
   }
   .text-block2:hover {
+    color: rgba(255, 255, 255, 1.0);
     opacity: 0.90;
-    height:400px;
+    height:800px;
 }
 
 @keyframes example2 {
@@ -308,6 +412,8 @@ top: 20px;
 }
 
  iframe {
+  position:relative;
+  z-index: 30;
    margin-top:20px;
   height: 120px;
   opacity: 0.50;
@@ -359,18 +465,8 @@ top: 20px;
 <center><iframe  width="100%" scrolling="no" frameborder="no" allow="autoplay" style="display:block" id="iframeAudio" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/532982658&auto_play=true"></iframe></center>
    
  <div class="text-block0">
-    <h4> <font color="white"><center><br>La voix des Ombres</center></font></h4>
-      <p>contes et legendes de notre temps 
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps
-      contes et legendes de notre temps  </p>
+    <h4> <font color="white" opacity="1.0"><center><br>Le voyage de Samar</center></font></h4><center><img id="img_4"  src="rosace.svg" alt="samar" /></center>
+      <p>Le  voyage  de  Samar  est  une  création  originale,  tissant  la  mythologie  de  notre histoire contemporaine. A travers le récit de notre épopée immédiate et sensible, ce conte tente de révéler aux enfants les enjeux des urgences climatiques. Il les invite à la découverte de l’héritage culturel perse. Prônant le respect de soi et de l’autre, ce spectacle questionne la notion d’altérité dans notre monde globalisé.D’où  vient  le  sentiment  d’être  chez  soi  et  celui  d’être  étranger  ?  Qui  est  l’étranger?  Où  sont  nos  racines  et  vers  où  tend  la  cime  ?  Comment  se  sentir rattaché au monde, à la vie, à notre histoire ? </p>
       <br>
     </div>
     <div class="pdf">
@@ -378,10 +474,27 @@ top: 20px;
   </div>
  </div>
   
-  <div class="column">
+  <div class="column2">
     <div class="text-block2" padding-top="-10px">
-      <h4><center><br>La voix des Ombres</center></h4>
-    <p>contes et legendes de notre temps  </p>
+      <h4><font color="white"><center><br><br>La voix des Ombres</center></font></h4>
+    <p>
+La compagnie s’est formée en 2018 à la suite d'un  premier
+spectacle de  marionette commandité par le théatre royale de la Monnaie qui  souhaitait réunir les cultures orientales et
+occidentales, ce spectacle de marionnette en ombre chinoise racontait la
+mystique histoire d’amour persanne de Layla et Majnun.
+C’est dans ce contexte que la collaboration avec Omid Dashti, musicien
+polymorphe, s’est lancée. La compagnie comporte aujourd’hui une
+dizaine de personnes, avides de savoir, déterminées à trouver de
+nouvelles formes de création.
+Ce rassemblement s’est vite axé autour d’un mot d’ordre commun : la
+transversalité des arts. Comment allier les arts de chacun pour créer
+des formes hybrides, emplies de la richesse de leurs messagers ?
+Marionnettistes, scénaristes, ingénieurs du son, réalisateurs, éditeurs,
+artistes sculpteurs, scénographes, dessinateurs, photographes… Autant
+de sensibilités et de savoir-faire qu’ils tentent de réunir sur des projets
+divers, à petite échelle ou avec plus d’ambition.
+
+    La compagnie est portée par huit artistes aux compétences multiples, elle continue, dans une même démarche authentique et sensible à transmettre des valeurs qui lui sont chères de curiosité, d’humanité et de passion, tout en élargissant ses propositions théâtrales à d’autres actions artistiques</p>
       <br>
     </div>
       <div class="text-block1" margin-bottom="25px">
@@ -396,10 +509,10 @@ top: 20px;
     </div>
   </div>
 
-  <div class="column">
+  <div class="column2">
     <div class="text-block1">
       <h4><center><br>La voix des Ombres</center></h4>
-    <p>contes et legendes de notre temps  </p>
+    <p> .</p>
       <br>
     </div>
       <div class="text-block4" margin-bottom="25px">
@@ -419,7 +532,7 @@ top: 20px;
     </div>
     </div>
   </div>
-<div class="column">
+<div class="column2">
   <div class="chat">
   <embed  name="embed_readwrite" width=100% height=500 scrolling="no" frameborder="no" allow="autoplay" style="display:block" src="https://hebdo.framapad.org/p/9gd6-compagniedesombres?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false"></embed>
 </div>
