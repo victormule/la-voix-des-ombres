@@ -116,6 +116,23 @@ top: 20px;
   transform: rotate(720deg);
   opacity:0.0;
   z-index:-2;
+  }
+
+#img_5 {
+  width: 101%;
+  opacity: 0.0;
+  position: absolute;
+  z-index: 2;
+  margin-left: -50%;
+  margin-top: -19%; 
+  transition: 7s;
+    }
+#img_5:hover {
+  width: 100%;
+  margin-left: -50%;
+  margin-top: -19%;
+  opacity:1.0;
+  z-index:20;
 
  
   }
@@ -421,6 +438,46 @@ height: 200px;
   iframe:hover {
   opacity: 0.90;
 }
+.text-block5 {
+  height: 130px;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding:0 10px;
+  text-align: justify; 
+  color: rgba(255, 255, 255, 0.0);
+  opacity: 0.4;
+  transition: height 10s, color 12s;
+  word-break: break-word;
+  -webkit-hyphens:auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  position: relative;
+  z-index: 1;
+  animation-name: example5;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  }
+  .text-block5:hover {
+  color: rgba(255, 255, 255, 1.0);
+   opacity: 0.90;
+   height:800px;
+   
+}
+
+@keyframes example5 {
+  0%   {opacity: 0.0; left:0px; top:0px;}
+  15%  {opacity: 0.1; left:200px; top:0px;}
+  25%  {opacity: 0.2; left:200%; top:200px;}
+  35%  {opacity: 0.3; left:0px; top:200px;}
+  50%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.35; left:0px; top:0px;}
+
+}
 
 .fa {font-size:50px;}
 
@@ -510,8 +567,8 @@ divers, à petite échelle ou avec plus d’ambition.
   </div>
 
   <div class="column2">
-    <div class="text-block1">
-      <h4><center><br>La voix des Ombres</center></h4>
+    <div class="text-block5">
+      <h4> <font color="white" opacity="1.0"><center><br>Le voyage de Samar</center></font></h4><center><img id="img_5"  src="majnun.svg" alt="Leila&Majnun" /></center>
     <p> .</p>
       <br>
     </div>
