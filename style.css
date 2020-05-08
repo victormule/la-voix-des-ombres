@@ -1,4 +1,4 @@
-      body  {
+    body  {
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 1.8)), 
   url("video.gif");
   background-color: transparent;
@@ -23,7 +23,7 @@ top: 20px;
   position: absolute;
    z-index: 11;
    margin-top: 3%;
-   margin-left: 3%;
+   margin-left: 0%;
    opacity: 0.6;
    transition: .4s;
   
@@ -34,7 +34,7 @@ top: 20px;
     opacity:0.93;
     width: 22%;
   margin-top: 2%;
-   margin-left: 2%;
+   margin-left: -1%;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 
@@ -44,7 +44,7 @@ top: 20px;
     opacity:0.9;
     width: 22%;
   margin-top: 2%;
-   margin-left: 2%;
+   margin-left: -1%;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 
@@ -56,7 +56,7 @@ top: 20px;
   border-radius: 100%;
   position: absolute;
   width: 26%;
-   transition: .4s;
+  margin-left: -3%;
    z-index: 2;
    animation-name: logo;
   animation-duration: 100s;
@@ -78,7 +78,7 @@ top: 20px;
     animation-duration: 10s;
     width: 28%; 
      margin-top: -1%;
-       margin-left: -1%;
+       margin-left: -4%;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
     }  
@@ -114,6 +114,7 @@ top: 20px;
 
 /* Float four columns side by side */
 .column {
+  z-index: 2;
   float:left;
   width: 20%;
   padding: 0 10px;
@@ -126,6 +127,7 @@ top: 20px;
   width: 25%;
 }
 .column2 {
+  z-index: 1;
   float:left;
   width: 20%;
   padding: 0 10px;
@@ -134,6 +136,18 @@ top: 20px;
 }
 
 .column2:hover {
+  width: 25%;
+}
+.column3{
+  z-index: 3;
+  float:left;
+  width: 20%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  transition: width 3s;
+}
+
+.column3:hover{
   width: 25%;
 }
 /* On screens that are 1200px wide or less, go from four columns to two columns*/
@@ -169,6 +183,7 @@ top: 20px;
 /* On screens that are 1200px wide or less, go from four columns to two columns*/
 @media screen and (max-width: 1200px) {
   .column2 {
+
     width: 33%;
     margin-left: 0%
   }
@@ -207,7 +222,7 @@ top: 20px;
   padding:0 15px;
   text-align: justify; 
   color: rgba(255, 255, 255, 0.0);
-  opacity: 0.4;
+  opacity: 0.2;
   transition: height 7s, color 5s;
   word-break: break-word;
   -webkit-hyphens:auto;
@@ -216,29 +231,26 @@ top: 20px;
   -o-hyphens: auto;
   hyphens: auto;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   animation-name: example;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate;
+  animation-direction: linear;
   }
   .text-block0:hover{
     color: rgba(255, 255, 255, 1.0);
     opacity: 0.95;
     height:400px;
-    z-index: 0;
+    z-index: 20;
 
   }
 
 @keyframes example {
-  0%   {opacity: 0.0; left:0px; top:0px;}
-  15%  {opacity: 0.1; left:300%; top:0px;}
-  25%  {opacity: 0.2; left:200px; top:200px;}
-  35%  {opacity: 0.3; left:0px; top:200px;}
-  50% {opacity: 1.0; left:0px; top:0px;}
-  100% {opacity: 0.35; left:0px; top:0px;}
+  0%   {opacity: 0.0; left:0px; top:-500px;}
+  80%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.2; left:0px; top:0px;}
 }
 /* On screens that are 1200px wide or less, go from four columns to two columns*/
 @media screen and (max-width: 1200px) {
@@ -284,7 +296,7 @@ opacity: 1.0;
 #backgroundbird:hover + .svg--bird{
   z-index: 2;
   margin-left: -10%;
-  animation: flying 2.5s 1 ease-in,up-down 1.68s infinite ease-out;
+  animation: flying 2.5s 1 ease-in-out,up-down2 1.68s infinite ease-out;
   animation-fill-mode: forwards;
 
   }
@@ -292,7 +304,7 @@ opacity: 1.0;
 
 @keyframes flying {
   0%   {opacity: 1.0; left:0px; top:0px;}
-  99%  {opacity: 0.0; left:230px; top:-800px; width: 1000% }
+  90%  {opacity: 0.0; left:230px; top:-800px; width: 1000% }
   100%  {opacity: 0.0; left:0%; top:0px;width: 20%;  }
   }
  
@@ -317,10 +329,10 @@ opacity: 1.0;
   
 }
 
-@-webkit-keyframes up-down {
+@-webkit-keyframes up-down2 {
   50% {
-    -webkit-transform: translate(0, 5%);
-            transform: translate(0, 5%);}}
+    -webkit-transform: translate(0, 3%);
+            transform: translate(0, 3%);}}
 @keyframes up-down {
   50% {
     -webkit-transform: translate(0, 5%);
@@ -343,7 +355,7 @@ opacity: 1.0;
   padding:0 10px;
   text-align: justify; 
   color: rgba(255, 255, 255, 0.0);
-  opacity: 0.4;
+  opacity: 0.2;
   transition: height 10s, color 12s;
   word-break: break-word;
   -webkit-hyphens:auto;
@@ -352,35 +364,31 @@ opacity: 1.0;
   -o-hyphens: auto;
   hyphens: auto;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   animation-name: example1;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate;
+  animation-direction: linear;
   }
   .text-block1:hover {
   color: rgba(255, 255, 255, 1.0);
    opacity: 0.90;
    height:299px;
+   z-index: 21;
    
 }
 
 @keyframes example1 {
-  0%   {opacity: 0.0; left:0px; top:0px;}
-  15%  {opacity: 0.1; left:200px; top:0px;}
-  25%  {opacity: 0.2; left:200%; top:200px;}
-  35%  {opacity: 0.3; left:0px; top:200px;}
-  50%  {opacity: 1.0; left:0px; top:0px;}
-  100% {opacity: 0.35; left:0px; top:0px;}
-
+  0%   {opacity: 0.0; left:0px; top:500px;}
+  80%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.2; left:0px; top:0px;}
 }
 
   /* Style the counter block */
 .text-block2 {
-  height: 200px;
-    height: 200px;
+  height: 230px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0,0, 0.5)),  url("logotexte.svg");
   background-color: black;
   background-repeat: no-repeat;
@@ -390,7 +398,7 @@ opacity: 1.0;
   padding: 0 15px;
   text-align: justify; 
   color: rgba(255, 255, 255, 0.0);
-  opacity: 0.4;
+  opacity: 0.2;
   transition: height 10s, color 12s, background .10s ;
   word-break: break-word;
   -webkit-hyphens:auto;
@@ -399,13 +407,13 @@ opacity: 1.0;
   -o-hyphens: auto;
   hyphens: auto;
   position: relative;
-  z-index: 1;
+  z-index:0;
   animation-name: example2;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate-reverse;
+  animation-direction: linear;
   }
   .text-block2:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9)),  url("logotexte.svg");
@@ -413,16 +421,13 @@ opacity: 1.0;
     color: rgba(255, 255, 255, 1.0);
     opacity: 0.90;
     height:800px;
+    z-index:20;
 }
 
 @keyframes example2 {
-  0% {opacity: 0.35; left:0px; top:0px;}
-  50%   {opacity: 1.0; left:0px; top:0px;}
-  65%  {opacity: 0.3; left:300%; top:0px;}
-  75%  {opacity: 0.2; left:200px; top:200px;}
-  85%  {opacity: 0.1; left:0px; top:200px;}
-  100% {opacity: 0.0; left:0px; top:0px;}
-
+  0%   {opacity: 0.0; left:0px; top:600px;}
+  80%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.2; left:0px; top:0px;}
 }
 
     /* Style the counter block */
@@ -432,27 +437,25 @@ opacity: 1.0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
-  opacity: 0.35;
+  opacity: 0.2;
   transition: height 10s;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   animation-name: example3;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate;
+  animation-direction: linear;
   }
   .text-block3:hover {
     opacity: 0.90;
     height:400px;
+    z-index: 20;
 }
 
 @keyframes example3 {
-  0%   {opacity: 0.0; left:0px; top:0px;}
-  15%  {opacity: 0.1; left:0px; top:-200px;}
-  25%  {opacity: 0.2; left:200%; top:200px;}
-  35%  {opacity: 0.3; left:0px; top:200px;}
+  0%   {opacity: 0.0; left:0px; top:500px;}
   50%  {opacity: 1.0; left:0px; top:0px;}
   100% {opacity: 0.35; left:0px; top:0px;}
 }
@@ -463,29 +466,27 @@ opacity: 1.0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
   color: rgba(0, 0, 0, 0.1);
-  opacity: 0.35;
+  opacity: 0.2;
   transition: height 10s;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   animation-name: example4;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate-reverse;
+  animation-direction: linear;
   }
   .text-block4:hover {
    opacity: 0.90;
    height:500px;
+   z-index: 20;
 }
 
 @keyframes example4 {
-  0% {opacity: 0.35; left:0px; top:0px;}
-  50%   {opacity: 1.0; left:0px; top:0px;}
-  65%  {opacity: 0.3; left:300px; top:200px;}
-  75%  {opacity: 0.2; left:200%; top:200px;}
-  85%  {opacity: 0.1; left:100px; top:0px;}
-  100% {opacity: 0.0; left:0px; top:0px;}
+  0%   {opacity: 0.0; left:0px; top:800px;}
+  50%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.35; left:0px; top:0px;}
 }
 
 .text-block5 {
@@ -495,7 +496,7 @@ opacity: 1.0;
   padding:0 10px;
   text-align: justify; 
   color: rgba(255, 255, 255, 0.0);
-  opacity: 0.4;
+  opacity: 0.2;
   transition: height 10s, color 12s;
   word-break: break-word;
   -webkit-hyphens:auto;
@@ -504,27 +505,24 @@ opacity: 1.0;
   -o-hyphens: auto;
   hyphens: auto;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   animation-name: example5;
   animation-duration: 14s;
   animation-timing-function: linear;
   animation-delay: -1s;
   animation-iteration-count: 1;
-  animation-direction: alternate;
+  animation-direction: linear;
   }
   .text-block5:hover {
   color: rgba(255, 255, 255, 1.0);
   opacity: 0.90;
-  height:750px;
+  height:850px;
+  z-index: 20;
 }
 @keyframes example5 {
-  0%   {opacity: 0.0; left:0px; top:0px;}
-  15%  {opacity: 0.1; left:200px; top:0px;}
-  25%  {opacity: 0.2; left:200%; top:200px;}
-  35%  {opacity: 0.3; left:0px; top:200px;}
-  50%  {opacity: 1.0; left:0px; top:0px;}
+  0%   {opacity: 0.0; left:0px; top:500px;}
+  80%  {opacity: 1.0; left:0px; top:0px;}
   100% {opacity: 0.35; left:0px; top:0px;}
-
 }
 #conteneur{
     opacity: 0.0;
@@ -540,7 +538,7 @@ opacity: 1.0;
     position: absolute;
 }
 #image1{
-   background: linear-gradient(-180deg, #23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background: linear-gradient(-180deg, #23d5ab, #ee7752, #e73c7e, #23a6d5, #190554);
   background-size: 400% 400%;
   animation: gradient 35s ease infinite;
   width: 107%;
@@ -731,12 +729,27 @@ width: 6.8%;
   75%   {opacity: 0.95;transform: rotate(7deg); left:0px; top:0.5%;}
   100%   {opacity: 0.95; left:0px; top:0px;}
 }
+.iframe{
+    animation-name: example11;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+  animation-iteration-count: 1;
+  animation-direction: linear;
+
+  }
+@keyframes example11 {
+  0%   {opacity: 0.0; left:0px; top:500px;}
+  80%  {opacity: 1.0; left:0px; top:0px;}
+  100% {opacity: 0.35; left:0px; top:0px;}
+}
  iframe {
   position:relative;
   z-index: 30;
    margin-top:20px;
   height: 120px;
-  opacity: 0.50;
+  opacity: 0.20;
+
   }
   iframe:hover {
   opacity: 0.90;
@@ -745,23 +758,23 @@ width: 6.8%;
 
 .pdf {
   position: relative;
-  z-index: 1;
+  z-index: 21;
   padding-top: 25px;
-  opacity: 0.50;
+  opacity: 0.20;
   transition: width 4s;
   }
   .pdf:hover {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   opacity: 0.90;
   width: 200%;
 }
 
 .chat {
   position: relative;
-  z-index: 1;
+  z-index: 21;
   padding-top: 20px;
-  opacity: 0.50;
+  opacity: 0.20;
   transition: width 4s;
   }
   .chat:hover {
@@ -769,4 +782,148 @@ width: 6.8%;
   z-index: 10;
   opacity: 0.90;
   width:170%;
+  z-index: 20;
 }
+
+.text-block6{
+  height: 280px;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding:0 15px;
+  text-align: center; 
+  color: rgba(255, 255, 255, 0.0);
+  opacity: 0.2;
+  transition: height 7s, color 5s;
+  word-break: break-word;
+  -webkit-hyphens:auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  opacity: 0.5;
+  transition: height 10s;
+  position: relative;
+  z-index: -0;
+  animation-name: example4;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-delay: -1s;
+  animation-iteration-count: 1;
+  animation-direction: linear;
+  }
+  .text-block6:hover{
+   height:500px;
+   color: rgba(255, 255, 255, 1.0);
+    opacity: 0.95;
+    z-index: 20;
+}
+#conteneur3{
+  background: blue;
+  float: right;
+    width: 100%;
+    height: 300px;
+    opacity: 0.0;
+    position: relative;
+    z-index:10;
+    transition: 3s;
+    margin-left: 50%;
+  margin-top:-25%;
+}
+.image300{
+    position: relative;
+}
+#conteneur3:hover {
+
+   width: 100%;
+    opacity: 1.0;
+        position: relative;
+        z-index: 10;
+}
+#conteneur3:hover + #imageZ{
+
+   opacity: 1.0;
+}
+#imageZ{
+ border-radius: 10%;
+  z-index: 20;
+  float: right;
+ width: 35%;
+  opacity: 1.0;
+  margin-right: 33%;
+  margin-top: 15%;   
+}
+#imageY{
+
+  background-image: none;
+   z-index: 3;
+  float: right;
+ width: 20%;
+  opacity: 1.0;
+  margin-left: 30%;
+  margin-top: -51.0%; 
+
+ } 
+#imageZ:hover{
+  z-index: 200;
+  transition: 3s;
+   width: 120%;
+   margin-top: -0%; 
+}
+
+#imageZ:hover + #imageY {
+  z-index: 20;
+   background-image: url("ink.png");
+   border-radius: 1%;
+  background-repeat: no-repeat;
+  background-size: 2850% 35%;
+   width: 380%;
+  animation: gradient2 2.5s steps(24) forwards;
+}
+@keyframes gradient2 {
+  0% {
+    background-position: 0% 0%; opacity: 0.1;
+  }
+  100% {
+    background-position: 100% 0%;opacity: 1.0
+  }
+  }
+  #imageZZ{
+ border-radius: 10%;
+  z-index: 20;
+  float: right;
+ width: 35%;
+  opacity: 1.0;
+  margin-right: 33%;
+  margin-top: 7%;   
+}
+#imageYY{
+
+  background-image: none;
+   z-index: 3;
+  float: right;
+ width: 20%;
+  opacity: 1.0;
+  margin-left: 30%;
+  margin-top: -50.0%; 
+
+ } 
+#imageZZ:hover{
+  z-index: 200;
+  transition: 4s;
+   width: 120%;
+   margin-top: -5%;
+ 
+}
+
+#imageZZ:hover + #imageYY {
+    z-index: 20;
+   background-image: url("ink.png");
+   border-radius: 1%;
+  background-repeat: no-repeat;
+  background-size: 2850% 35%;
+   width: 380%;
+   margin-top: -67%;
+  animation: gradient2 2.5s steps(24) forwards;
+}
+
+
