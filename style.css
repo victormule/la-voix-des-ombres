@@ -1,5 +1,5 @@
     body  {
-        flex:center;
+  display: flex;
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 1.8)), 
   url("video.gif");
   background-color: transparent;
