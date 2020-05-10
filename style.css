@@ -882,7 +882,7 @@ width: 6.8%;
 
 #imageZ:hover + #imageY {
   z-index: 20;
-   background-image: url("ink.png");
+   background-image: url("ink.jpg");
    border-radius: 1%;
   background-repeat: no-repeat;
   background-size: 2850% 35%;
@@ -927,7 +927,7 @@ width: 6.8%;
 
 #imageZZ:hover + #imageYY {
     z-index: 20;
-   background-image: url("ink2.png");
+   background-image: url("ink2.jpg");
    border-radius: 1%;
   background-repeat: no-repeat;
   background-size: 2850% 35%;
