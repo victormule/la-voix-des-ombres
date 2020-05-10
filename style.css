@@ -23,7 +23,7 @@ top: 20px;
   position: absolute;
    z-index: 11;
    margin-top: 2%;
-   margin-left: 1%;
+   margin-left: 2%;
    opacity: 0.6;
    transition: .4s;
   
@@ -34,7 +34,7 @@ top: 20px;
     opacity:0.93;
     width: 17%;
   margin-top: 1%;
-   margin-left: -2%;
+   margin-left: -0%;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 
@@ -57,7 +57,7 @@ top: 20px;
   position: absolute;
   width: 20%;
   margin-top: -0.5%;
-  margin-left: -2.5%;
+  margin-left: -0%;
    z-index: 2;
    animation-name: logo;
   animation-duration: 100s;
