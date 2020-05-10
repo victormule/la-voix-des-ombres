@@ -57,7 +57,7 @@ top: 20px;
   position: absolute;
   width: 20%;
   margin-top: -0.5%;
-  margin-left: 0%;
+  margin-left: 0.5%;
    z-index: 2;
    animation-name: logo;
   animation-duration: 100s;
@@ -79,7 +79,7 @@ top: 20px;
     animation-duration: 10s;
     width: 22%; 
      margin-top: -1.5%;
-       margin-left: 0%;
+       margin-left: -1%;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
             -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
     }  
